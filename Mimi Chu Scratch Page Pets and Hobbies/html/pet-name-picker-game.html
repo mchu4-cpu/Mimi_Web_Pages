@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Name Picker Game - Mimi Chu</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .back-link {
+            margin-bottom: 20px;
+        }
+        .back-link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-link">
+        <a href="../Index_Mimi_Chu.html">← Back to Home</a>
+    </div>
+
+    <h1>🐾 Pet Name Picker Game</h1>
+
+    <section id="name-picker" class="card">
+        <h2>Find a name for your pet</h2>
+        <form id="nameForm">
+            <div class="form-row">
+                <span class="label">Pet type</span>
+                <label class="radio"><input type="radio" name="type" value="dog" checked> Dog</label>
+                <label class="radio"><input type="radio" name="type" value="cat"> Cat</label>
+            </div>
+
+            <div class="form-row">
+                <span class="label">Gender</span>
+                <label class="radio"><input type="radio" name="gender" value="any" checked> Any</label>
+                <label class="radio"><input type="radio" name="gender" value="male"> Male</label>
+                <label class="radio"><input type="radio" name="gender" value="female"> Female</label>
+            </div>
+
+            <div class="form-row">
+                <label for="location">Where do you live?</label>
+                <input id="location" name="location" type="text" placeholder="City or country (e.g., US)" />
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn">Pick a name</button>
+                <button type="button" id="randomize" class="btn ghost">Surprise me</button>
+            </div>
+        </form>
+
+        <div id="result" class="result" aria-live="polite"></div>
+
+        <div id="saved" class="saved">
+            <h3>Saved names</h3>
+            <ul id="savedList"></ul>
+        </div>
+    </section>
+
+    <script src="../js/namer.js"></script>
+</body>
+</html>
